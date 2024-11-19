@@ -1,13 +1,18 @@
 {
   "name": "mx-h5-jsbridge",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "支持H5和iOS/Android/Harmony进行双向通信,H5 和原生通讯只需一套代码",
   "repository": "",
   "license": "MIT",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "lib",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "vite.config.js"
   ],
   "main": "./dist/jsBridge.cjs",
   "module": "./dist/jsBridge.js",
