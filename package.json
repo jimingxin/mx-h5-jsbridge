@@ -9,9 +9,6 @@
   "files": [
     "dist",
     "lib",
-    "package.json",
-    "README.md",
-    "LICENSE",
     "vite.config.js"
   ],
   "main": "./dist/jsBridge.cjs",
