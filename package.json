@@ -1,22 +1,10 @@
 {
   "name": "mx-h5-jsbridge",
-  "private": false,
   "version": "1.0.2",
   "description": "支持H5和iOS/Android/Harmony进行双向通信,H5 和原生通讯只需一套代码",
   "repository": "",
   "license": "MIT",
-  "type": "module",
-  "files": [
-    "dist",
-    "lib",
-    "vite.config.js"
-  ],
-  "main": "./dist/jsBridge.cjs",
-  "module": "./dist/jsBridge.js",
-  "exports": {
-    "import": "./dist/jsBridge.js",
-    "require": "./dist/jsBridge.umd.cjs"
-  },
+  "main": "dist/jsBridge.js",
   "keywords": [
     "jsbridge",
     "js-bridge",
@@ -26,10 +14,20 @@
     "react-jsbridge"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "build": "npm run build-debug && npm run build-min",
+    "build-debug": "webpack",
+    "build-min": "cross-env NODE_ENV=production webpack",
+    "build-watch": "webpack --watch",
+    "prepublish": "npm run build"
   },
+  "dependencies": {},
   "devDependencies": {
-    "vite": "^5.4.9"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^3.1.2"
   }
 }
