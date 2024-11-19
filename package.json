@@ -1,6 +1,6 @@
 {
   "name": "mx-h5-jsbridge",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "description": "支持H5和iOS/Android/Harmony进行双向通信,H5 和原生通讯只需一套代码",
   "repository": "",
