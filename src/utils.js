@@ -2,7 +2,7 @@ export function getBrowserInfo() {
   const ua = window.navigator.userAgent.toLowerCase() || navigator.vendor.toLowerCase() || window.opera.toLowerCase()
   const isAndroid = /Android/i.test(ua)
   const isIOS = /iPhone|iPad|iPod/i.test(ua)
-  const isHarmonyOS = /HarmonyOs|OpenHarmony/i.test(ua)
+  const isHarmonyOS = /HarmonyOs|OpenHarmony/i.test(ua) && !isAndroid
   return { isIOS, isAndroid, isHarmonyOS }
 }
 export function isJSON(str) {
